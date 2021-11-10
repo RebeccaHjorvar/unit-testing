@@ -13,24 +13,22 @@ namespace ClassLibrary_2021_11_09.Tests
         [DataRow(500, 1, 1)]
         public void WithdrawTest(double money, int accountNr, int pinCode, bool useSwish = false)
         {
-            var bank = new Bank();
-            Assert.IsTrue(bank.Withdraw(money: money, accountNr: accountNr, pinCode: pinCode, useSwish));
+            
+            Assert.IsTrue(Bank.Withdraw(money, accountNr, pinCode, useSwish));
         }
 
         [TestMethod]
         [DataRow(1000, 3, 3, true)]
         public void WithdrawTest_hasSwish_shouldReturnTrue(double money, int accountNr, int pinCode, bool useSwish)
         {
-            var bank = new Bank();
-            Assert.IsTrue(bank.Withdraw(money, accountNr, pinCode, useSwish));
+            Assert.IsTrue(Bank.Withdraw(money, accountNr, pinCode, useSwish));
         }
 
         [TestMethod]
         [DataRow(-800000, 3, 3, true)]
         public void WithdrawTest_negativeAmount_shouldReturnFalse(double money, int accountNr, int pinCode, bool useSwish)
         {
-            var bank = new Bank();
-            Assert.IsFalse(bank.Withdraw(money, accountNr, pinCode, useSwish));
+            Assert.IsFalse(Bank.Withdraw(money, accountNr, pinCode, useSwish));
         }
 
 
@@ -38,8 +36,7 @@ namespace ClassLibrary_2021_11_09.Tests
         [DataRow(169000, 1, 1)]
         public void DepositTest_shouldReturnTrue(double money, int accountNr, int pinCode)
         {
-            var bank = new Bank();
-            Assert.IsTrue(bank.Deposit(money, accountNr, pinCode));
+            Assert.IsTrue(Bank.Deposit(money, accountNr, pinCode));
         }
 
     }

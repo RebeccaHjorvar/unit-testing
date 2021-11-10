@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace ClassLibrary_2021_11_09
 {
-    public class Bank
+    public static class Bank
     {
-        public List<Account> Accounts = new List<Account>
+        public static List<Account> Accounts = new List<Account>
         {
             new Account(-200, 1, 1, 1000, true, 3000),
             new Account(200, 2, 2, 100, false, 0),
             new Account(300, 3, 3, 1000,  true, 3000)
         };
-        public bool Withdraw(double money, int accountNr, int pinCode, bool useSwish)
+        public static bool Withdraw(double money, int accountNr, int pinCode, bool useSwish)
         {
             try
             {
@@ -104,7 +104,7 @@ namespace ClassLibrary_2021_11_09
                 return false;
             }
         }
-        public bool Deposit(double money, int accountNr, int pinCode)
+        public static bool Deposit(double money, int accountNr, int pinCode)
         {
             var acc = Accounts.Find(x => x.AccountNr == accountNr);
             if (acc.PinCode == pinCode)
