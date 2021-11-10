@@ -19,69 +19,69 @@ namespace ClassLibrary_2021_11_09
                 {
                     return false;
                 } 
-                var acc = Accounts.Find(x => x.accountNr == accountNr);
-                if (acc.pinCode == pinCode)
+                var acc = Accounts.Find(x => x.AccountNr == accountNr);
+                if (acc.PinCode == pinCode)
                 {
                     if (!useSwish)
                     {
-                        if (money <= acc.balance + acc.credit)
+                        if (money <= acc.Balance + acc.Credit)
                         {
-                            var newBalance = acc.balance -= money;
+                            var newBalance = acc.Balance -= money;
                             if (newBalance < 0)
                             {
-                                var newCredit = acc.balance + acc.credit;
+                                var newCredit = acc.Balance + acc.Credit;
                                 if (newCredit < 0)
                                 {
                                     return false;
                                 }
                                 else
                                 {
-                                    acc.balance = 0;
-                                    acc.credit = newCredit;
+                                    acc.Balance = 0;
+                                    acc.Credit = newCredit;
                                     return true;
                                 }
                             }
-                                acc.balance = newBalance;
+                                acc.Balance = newBalance;
                                 return true;
                         }
                     }
                     else
                     {
-                        if (acc.swishConnection)
+                        if (acc.SwishConnection)
                         {
-                            if (money <= acc.balance + acc.credit)
+                            if (money <= acc.Balance + acc.Credit)
                             {
-                                if (acc.weeklySwishUsage>0)
+                                if (acc.WeeklySwishUsage>0)
                                 {
                                     var dateCheck = DateTime.Now.AddDays(+7);
-                                    if (acc.latestSwishWithdraw < dateCheck)
+                                    if (acc.LatestSwishWithdraw < dateCheck)
                                     {
-                                        acc.weeklySwishUsage = 0;
+                                        acc.WeeklySwishUsage = 0;
                                     }
                                 }
-                                if (money + acc.weeklySwishUsage < acc.swishLimit )
+                                if (money + acc.WeeklySwishUsage < acc.SwishLimit )
                                 {
-                                    var newBalance = acc.balance -= money;
-                                    var newWeeklySwishUsage = acc.weeklySwishUsage += money;
+                                    var newBalance = acc.Balance -= money;
+                                    var newWeeklySwishUsage = acc.WeeklySwishUsage += money;
                                     if (newBalance < 0)
                                     {
-                                        var newCredit = acc.balance + acc.credit;
+                                        var newCredit = acc.Balance + acc.Credit;
                                         if (newCredit < 0)
                                         {
                                             return false;
                                         }
                                         else
                                         {
-                                            acc.balance = 0;
-                                            acc.credit = newCredit;
-                                            acc.weeklySwishUsage = newWeeklySwishUsage;
-                                            acc.latestSwishWithdraw = DateTime.Now;
+                                            acc.Balance = 0;
+                                            acc.Credit = newCredit;
+                                            acc.WeeklySwishUsage = newWeeklySwishUsage;
+                                            acc.LatestSwishWithdraw = DateTime.Now;
                                             return true;
                                         }
                                     }
-                                    acc.balance = newBalance;
-                                    acc.weeklySwishUsage = newWeeklySwishUsage;
-                                    acc.latestSwishWithdraw = DateTime.Now;
+                                    acc.Balance = newBalance;
+                                    acc.WeeklySwishUsage = newWeeklySwishUsage;
+                                    acc.LatestSwishWithdraw = DateTime.Now;
                                     return true;
                                 }
                             }
@@ -106,8 +106,8 @@ namespace ClassLibrary_2021_11_09
         }
         public bool Deposit(double money, int accountNr, int pinCode)
         {
-            var acc = Accounts.Find(x => x.accountNr == accountNr);
-            if (acc.pinCode == pinCode)
+            var acc = Accounts.Find(x => x.AccountNr == accountNr);
+            if (acc.PinCode == pinCode)
             {
                 if(money > 100.000)
                 {
@@ -115,14 +115,14 @@ namespace ClassLibrary_2021_11_09
                 }
                 if (money > 15000)
                 {
-                    if (acc.warnings > 1)
+                    if (acc.Warnings > 1)
                     {
                         return false;
                     }
                     else
                     {
-                        acc.warnings++;
-                        acc.balance += money;
+                        acc.Warnings++;
+                        acc.Balance += money;
                         return true;
                     }
                 }
