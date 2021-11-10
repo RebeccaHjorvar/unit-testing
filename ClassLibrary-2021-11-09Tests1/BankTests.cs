@@ -22,7 +22,7 @@ namespace ClassLibrary_2021_11_09.Tests
         public void WithdrawTest_hasSwish_shouldReturnTrue(double money, int accountNr, int pinCode, bool useSwish)
         {
             var bank = new Bank();
-            Assert.IsTrue(bank.Withdraw(money: money, accountNr: accountNr, pinCode: pinCode, useSwish: useSwish));
+            Assert.IsTrue(bank.Withdraw(money, accountNr, pinCode, useSwish));
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace ClassLibrary_2021_11_09.Tests
         public void WithdrawTest_negativeAmount_shouldReturnFalse(double money, int accountNr, int pinCode, bool useSwish)
         {
             var bank = new Bank();
-            Assert.IsFalse(bank.Withdraw(money: money, accountNr: accountNr, pinCode: pinCode, useSwish: useSwish));
+            Assert.IsFalse(bank.Withdraw(money, accountNr, pinCode, useSwish));
         }
 
 
