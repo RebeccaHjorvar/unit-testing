@@ -1,0 +1,10 @@
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\bin\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.deps.json
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\bin\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.dll
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\bin\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.pdb
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.csproj.AssemblyReference.cache
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.AssemblyInfoInputs.cache
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.AssemblyInfo.cs
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.csproj.CoreCompileInputs.cache
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.dll
+C:\Users\Rebecca\source\repos\ClassLibrary-2021-11-09\ClassLibrary-2021-11-09\obj\Debug\netcoreapp3.1\ClassLibrary-2021-11-09.pdb
